@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Highlighter （高亮标注）</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+         max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #1f2937; }
+  h1 { font-size: 26px; } h2 { font-size: 19px; margin-top: 32px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f9fafb; }
+  .meta { color: #6b7280; font-size: 14px; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 40px 0; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — Highlighter</h1>
+<p class="meta">Effective date: October 5, 2026 · Applies to Highlighter （高亮标注） version 0.2.0 and later 0.x versions.</p>
+
+<h2>The short version</h2>
+<p>Highlighter has <strong>no account, no server, and no analytics</strong>. Your highlights,
+notes, and settings are stored only in your browser's local storage. Nothing you highlight,
+write, or visit is collected, transmitted, sold, or shared — there is nowhere for it to go.</p>
+
+<h2>What is stored, and where</h2>
+<p>When you create a highlight, the extension saves the highlighted text, a short snippet of
+surrounding context (used to find the spot again), its color, your note, the page URL and
+title, and timestamps. Imported highlights may additionally keep the folder and tags from
+the imported file. All of this lives in <code>chrome.storage.local</code> on your own
+device, inside your browser profile.</p>
+
+<h2>What is NOT collected</h2>
+<ul>
+  <li>No personal information, no identifiers, no usage statistics, no crash reports.</li>
+  <li>No browsing history is recorded beyond the pages you choose to highlight on
+      (a highlight has to remember which page it belongs to).</li>
+  <li>No cookies, no third-party scripts, no remote requests of any kind.
+      The extension makes zero network calls.</li>
+</ul>
+
+<h2>Page content</h2>
+<p>To render and restore your highlights, the extension's content script reads the text of
+pages you visit <em>in your browser only</em>, matches it against your stored highlights,
+and wraps the matching ranges. This processing happens entirely on your device; page
+content is never copied out, stored separately, or sent anywhere.</p>
+
+<h2>Permissions and why each is needed</h2>
+<table>
+  <tr><th>Permission</th><th>Purpose</th></tr>
+  <tr><td>storage</td><td>Save highlights, notes, and settings in local browser storage.</td></tr>
+  <tr><td>activeTab</td><td>After you click an item in the side panel, communicate with the
+      tab you are interacting with (jump to a highlight, manual re-locate).</td></tr>
+  <tr><td>contextMenus</td><td>Provide the right-click "Highlight selection" menu entry.</td></tr>
+  <tr><td>sidePanel</td><td>Display the highlight list in the browser's side panel.</td></tr>
+  <tr><td>Content script on web pages</td><td>Render and restore your own highlights on
+      pages you visit (see "Page content" above).</td></tr>
+</table>
+
+<h2>Import and export</h2>
+<p>Import reads only a CSV file that you pick with the file chooser. Export downloads a
+file (JSON, CSV, or Markdown) to your device when you click the export button. Both are
+local file operations; no data leaves your device.</p>
+
+<h2>Deleting your data</h2>
+<p>Delete individual highlights in the side panel, or remove the extension from your
+browser — uninstalling deletes all locally stored data with it. There is no server copy
+to request deletion of, because there is no server.</p>
+
+<h2>Changes to this policy</h2>
+<p>If a future version changes any of the above (for example, an optional sync feature),
+this page will be updated before that version ships, and any feature that transmits data
+will be opt-in and off by default.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be sent through the support/feedback channel on the
+extension's store listing page.</p>
+
+<hr>
+
+<h1>隐私政策 — 高亮标注</h1>
+<p class="meta">生效日期：2026 年 10 月 5 日 · 适用于「高亮标注」（Highlighter）0.2.0 及后续 0.x 版本。</p>
+
+<h2>一句话版本</h2>
+<p>本扩展<strong>没有账号、没有服务器、没有任何统计</strong>。你的高亮、备注与设置只保存在
+你浏览器本地存储中。你标注的内容、写下的备注、访问的页面，都不会被收集、传输、出售或
+分享——因为根本没有可以传去的地方。</p>
+
+<h2>保存什么、存在哪里</h2>
+<p>创建高亮时，扩展保存：被高亮的文本、其前后一小段上下文（用于再次打开时定位）、颜色、
+你的备注、页面 URL 与标题、时间戳。导入的高亮还可能带有导入文件中的文件夹与标签。
+以上全部保存在你自己设备上、浏览器配置文件内的 <code>chrome.storage.local</code> 中。</p>
+
+<h2>不收集什么</h2>
+<ul>
+  <li>不收集个人信息、标识符、使用统计、崩溃报告，一概不收集。</li>
+  <li>除你主动标注的页面外，不记录浏览历史（高亮必须记住它属于哪个页面）。</li>
+  <li>无 Cookie、无第三方脚本、无任何远程请求——扩展不发出任何网络请求。</li>
+</ul>
+
+<h2>页面内容如何处理</h2>
+<p>为渲染与恢复高亮，内容脚本会读取你所访问页面的文本，但<em>仅在你的浏览器内</em>与本地
+保存的高亮做匹配并包裹对应区间。处理完全在本地进行；页面内容不会被复制出去、另行存储
+或发送到任何地方。</p>
+
+<h2>权限及用途</h2>
+<table>
+  <tr><th>权限</th><th>用途</th></tr>
+  <tr><td>storage</td><td>将高亮、备注与设置保存在浏览器本地存储。</td></tr>
+  <tr><td>activeTab</td><td>在你点击侧边栏条目后，与你正在交互的标签页通信（跳转定位、手动重新定位）。</td></tr>
+  <tr><td>contextMenus</td><td>提供右键菜单「高亮选中文本」入口。</td></tr>
+  <tr><td>sidePanel</td><td>在浏览器侧边栏中展示高亮列表。</td></tr>
+  <tr><td>页面内容脚本</td><td>在你访问的页面上渲染与恢复你自己的高亮（见上「页面内容如何处理」）。</td></tr>
+</table>
+
+<h2>导入与导出</h2>
+<p>导入只读取你通过文件选择器主动选定的 CSV 文件；导出在你点击导出按钮时把文件
+（JSON / CSV / Markdown）下载到你的设备。两者都是本地文件操作，数据不离开你的设备。</p>
+
+<h2>删除数据</h2>
+<p>可在侧边栏逐条删除高亮；或直接卸载扩展——卸载即删除全部本地数据。不存在需要申请
+删除的服务器副本，因为没有服务器。</p>
+
+<h2>政策变更</h2>
+<p>若未来版本改变以上任何一条（例如增加可选同步功能），本页会在该版本发布前更新，
+且任何会传输数据的功能都将默认关闭、需你主动开启。</p>
+
+<h2>联系</h2>
+<p>关于本政策的问题，可通过扩展在商店详情页提供的支持/反馈渠道联系我们。</p>
+
+</body>
+</html>
