@@ -1,4 +1,63 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Highlighter</title></head>
-<body><h1>Highlighter</h1><p>Local-first web highlighter for Microsoft Edge. Highlights and notes are stored only in your browser.</p>
-<p><a href="https://microsoftedge.microsoft.com/addons/detail/highlighter/ooocjgnapglfljdgojdoacjdedpaplhe">Get it on Microsoft Edge Add-ons</a></p>
-<p><a href="privacy.html">Privacy Policy</a></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Highlighter — Local-first web highlighter for Microsoft Edge</title>
+<meta name="description" content="Free, local-first web highlighter for Microsoft Edge. Four-color highlights with notes, quote-anchored restore, Weava CSV import, export to JSON/CSV/Markdown. No account, no server, no tracking.">
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.6; color: #1a1a1a; max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+  h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  .tagline { color: #444; margin-top: 0; }
+  .cta { display: inline-block; margin: 1rem 0; padding: 0.6rem 1.2rem; background: #0b5cad; color: #fff; text-decoration: none; border-radius: 6px; }
+  ul { padding-left: 1.25rem; }
+  footer { margin-top: 3rem; color: #555; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<h1>Highlighter</h1>
+<p class="tagline">Local-first web highlighter for Microsoft Edge — no account, no server, no tracking.</p>
+
+<p><a class="cta" href="https://microsoftedge.microsoft.com/addons/detail/highlighter/ooocjgnapglfljdgojdoacjdedpaplhe">Get it on Microsoft Edge Add-ons</a></p>
+<p>Free, with no feature locks and no in-app purchases in this version.</p>
+
+<h2>Highlight, annotate, find later</h2>
+<ul>
+  <li>Four colors; add a note to any highlight.</li>
+  <li>Select text to get a floating toolbar, or use the right-click menu.</li>
+  <li>Side panel lists all highlights grouped by page, with a color filter and full-text search (quote, note, page title, folder, tags). Click a highlight to jump back to its spot on the page.</li>
+</ul>
+
+<h2>Highlights that survive page changes</h2>
+<ul>
+  <li>Each highlight is restored by matching the quoted text plus a short snippet of surrounding context — not character offsets or XPath, which break when a page is edited.</li>
+  <li>If a highlight can no longer be located, it is never silently dropped: it stays in the side panel marked “not found”, and you can re-locate it by selecting the text on the page and clicking Bind.</li>
+</ul>
+
+<h2>Import &amp; export</h2>
+<ul>
+  <li>Weava CSV import: a preview shows per-page counts plus duplicate and unusable-row tallies before anything is written. Imported highlights re-anchor when you open the page.</li>
+  <li>Export your data at any time to JSON, CSV, or Markdown. Your data is never held hostage.</li>
+</ul>
+
+<h2>Private by default</h2>
+<ul>
+  <li>No account, no sign-up. There is no server — everything is stored in your browser’s local storage (<code>chrome.storage.local</code>) and nothing is uploaded anywhere.</li>
+  <li>No analytics, no tracking, no ads.</li>
+</ul>
+
+<h2>Limits, stated plainly</h2>
+<ul>
+  <li>No PDF highlighting in this version.</li>
+  <li>It cannot run on browser-internal pages (<code>chrome://</code>, <code>edge://</code>), other extensions’ pages, or the extension stores themselves.</li>
+  <li>Re-anchoring is text matching, not magic: heavy rewrites may need a manual Bind.</li>
+</ul>
+
+<p><a class="cta" href="https://microsoftedge.microsoft.com/addons/detail/highlighter/ooocjgnapglfljdgojdoacjdedpaplhe">Get it on Microsoft Edge Add-ons</a></p>
+
+<footer>
+  <p><a href="privacy.html">Privacy Policy</a></p>
+</footer>
+</body>
+</html>
