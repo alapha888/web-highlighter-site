@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alapha888.github.io/web-highlighter-site/sitemap.xml
