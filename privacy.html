@@ -18,12 +18,15 @@
 <body>
 
 <h1>Privacy Policy — Highlighter</h1>
-<p class="meta">Effective date: October 5, 2026 · Applies to Highlighter （高亮标注） version 0.2.0 and later 0.x versions.</p>
+<p class="meta">Effective date: October 11, 2026 · Applies to Highlighter （高亮标注） version 0.2.0 and later 0.x versions.</p>
 
 <h2>The short version</h2>
-<p>Highlighter has <strong>no account, no server, and no analytics</strong>. Your highlights,
-notes, and settings are stored only in your browser's local storage. Nothing you highlight,
-write, or visit is collected, transmitted, sold, or shared — there is nowhere for it to go.</p>
+<p>Highlighter has <strong>no account and no analytics</strong>, and we run no server of
+our own. Your highlights, notes, and settings are stored only in your browser's local
+storage; nothing you highlight, write, or visit is collected, transmitted, sold, or shared.
+The one exception is optional Pro activation, described below: if you paste a Pro license
+key, the key itself — and nothing else — is sent to Gumroad to check that it is valid.
+If you never activate Pro, the extension makes no network requests at all.</p>
 
 <h2>What is stored, and where</h2>
 <p>When you create a highlight, the extension saves the highlighted text, a short snippet of
@@ -37,8 +40,9 @@ device, inside your browser profile.</p>
   <li>No personal information, no identifiers, no usage statistics, no crash reports.</li>
   <li>No browsing history is recorded beyond the pages you choose to highlight on
       (a highlight has to remember which page it belongs to).</li>
-  <li>No cookies, no third-party scripts, no remote requests of any kind.
-      The extension makes zero network calls.</li>
+  <li>No cookies, no third-party scripts. Apart from the optional Pro license
+      check below, the extension makes no network requests — and without Pro
+      activation, none at all.</li>
 </ul>
 
 <h2>Page content</h2>
@@ -46,6 +50,16 @@ device, inside your browser profile.</p>
 pages you visit <em>in your browser only</em>, matches it against your stored highlights,
 and wraps the matching ranges. This processing happens entirely on your device; page
 content is never copied out, stored separately, or sent anywhere.</p>
+
+<h2>Pro license verification (the only network call)</h2>
+<p>Pro is optional. If you buy Pro and paste the license key Gumroad issued into the side
+panel, the extension sends that key — together with the product ID, and nothing else — to
+Gumroad (<code>api.gumroad.com</code>) once at activation to verify it, and re-checks it
+about once every 30 days after that. No highlight, note, page content, or usage data is
+ever included. The verdict is cached locally, so Pro keeps working offline between checks.
+Before the first check, the browser asks for an optional permission covering only
+<code>api.gumroad.com</code>. If you never activate Pro, the extension sends nothing
+anywhere. Gumroad handles the key under Gumroad's own privacy policy.</p>
 
 <h2>Permissions and why each is needed</h2>
 <table>
@@ -55,6 +69,9 @@ content is never copied out, stored separately, or sent anywhere.</p>
       tab you are interacting with (jump to a highlight, manual re-locate).</td></tr>
   <tr><td>contextMenus</td><td>Provide the right-click "Highlight selection" menu entry.</td></tr>
   <tr><td>sidePanel</td><td>Display the highlight list in the browser's side panel.</td></tr>
+  <tr><td>Optional host permission: api.gumroad.com</td><td>Requested only when you
+      activate a Pro key, to send that key to Gumroad for verification (see above).
+      Never used by the free features.</td></tr>
   <tr><td>Content script on web pages</td><td>Render and restore your own highlights on
       pages you visit (see "Page content" above).</td></tr>
 </table>
@@ -66,8 +83,9 @@ local file operations; no data leaves your device.</p>
 
 <h2>Deleting your data</h2>
 <p>Delete individual highlights in the side panel, or remove the extension from your
-browser — uninstalling deletes all locally stored data with it. There is no server copy
-to request deletion of, because there is no server.</p>
+browser — uninstalling deletes all locally stored data with it. We run no server, so
+there is no server copy of your highlights or notes to request deletion of. (If you bought
+Pro, Gumroad keeps its own purchase records under Gumroad's policy.)</p>
 
 <h2>Changes to this policy</h2>
 <p>If a future version changes any of the above (for example, an optional sync feature),
@@ -81,12 +99,14 @@ extension's store listing page.</p>
 <hr>
 
 <h1>隐私政策 — 高亮标注</h1>
-<p class="meta">生效日期：2026 年 10 月 5 日 · 适用于「高亮标注」（Highlighter）0.2.0 及后续 0.x 版本。</p>
+<p class="meta">生效日期：2026 年 10 月 11 日 · 适用于「高亮标注」（Highlighter）0.2.0 及后续 0.x 版本。</p>
 
 <h2>一句话版本</h2>
-<p>本扩展<strong>没有账号、没有服务器、没有任何统计</strong>。你的高亮、备注与设置只保存在
-你浏览器本地存储中。你标注的内容、写下的备注、访问的页面，都不会被收集、传输、出售或
-分享——因为根本没有可以传去的地方。</p>
+<p>本扩展<strong>没有账号、没有任何统计</strong>，我们也不运行自己的服务器。你的高亮、
+备注与设置只保存在你浏览器本地存储中；你标注的内容、写下的备注、访问的页面，都不会被
+收集、传输、出售或分享。唯一的例外是可选的 Pro 激活（见下文）：你粘贴 Pro 激活钥匙时，
+只有钥匙本身会被发送给 Gumroad 验证有效性，不发送任何其他数据。不激活 Pro，扩展不发出
+任何网络请求。</p>
 
 <h2>保存什么、存在哪里</h2>
 <p>创建高亮时，扩展保存：被高亮的文本、其前后一小段上下文（用于再次打开时定位）、颜色、
@@ -97,13 +117,21 @@ extension's store listing page.</p>
 <ul>
   <li>不收集个人信息、标识符、使用统计、崩溃报告，一概不收集。</li>
   <li>除你主动标注的页面外，不记录浏览历史（高亮必须记住它属于哪个页面）。</li>
-  <li>无 Cookie、无第三方脚本、无任何远程请求——扩展不发出任何网络请求。</li>
+  <li>无 Cookie、无第三方脚本。除下文可选的 Pro 钥匙校验外，扩展不发出任何网络请求；不激活 Pro 则完全不发出。</li>
 </ul>
 
 <h2>页面内容如何处理</h2>
 <p>为渲染与恢复高亮，内容脚本会读取你所访问页面的文本，但<em>仅在你的浏览器内</em>与本地
 保存的高亮做匹配并包裹对应区间。处理完全在本地进行；页面内容不会被复制出去、另行存储
 或发送到任何地方。</p>
+
+<h2>Pro 钥匙校验（唯一的联网行为）</h2>
+<p>Pro 为可选付费功能。若你购买 Pro 并把 Gumroad 发放的激活钥匙粘贴到侧边栏，扩展会在
+激活时把该钥匙（连同产品 ID，除此之外别无其他数据）发送给 Gumroad（<code>api.gumroad.com</code>）
+验证一次，其后约每 30 天复查一次。高亮、备注、页面内容与使用数据从不包含在内。校验结果
+保存在本地，复查间隔期间 Pro 可离线使用。首次校验前，浏览器会请求一个仅覆盖
+<code>api.gumroad.com</code> 的可选权限。不激活 Pro，扩展不会向任何地方发送任何数据。
+Gumroad 对钥匙的处理适用 Gumroad 自身的隐私政策。</p>
 
 <h2>权限及用途</h2>
 <table>
@@ -112,6 +140,7 @@ extension's store listing page.</p>
   <tr><td>activeTab</td><td>在你点击侧边栏条目后，与你正在交互的标签页通信（跳转定位、手动重新定位）。</td></tr>
   <tr><td>contextMenus</td><td>提供右键菜单「高亮选中文本」入口。</td></tr>
   <tr><td>sidePanel</td><td>在浏览器侧边栏中展示高亮列表。</td></tr>
+  <tr><td>可选站点权限：api.gumroad.com</td><td>仅在你激活 Pro 钥匙时请求，用于把钥匙发送给 Gumroad 验证（见上文）。免费功能从不使用。</td></tr>
   <tr><td>页面内容脚本</td><td>在你访问的页面上渲染与恢复你自己的高亮（见上「页面内容如何处理」）。</td></tr>
 </table>
 
@@ -120,8 +149,9 @@ extension's store listing page.</p>
 （JSON / CSV / Markdown）下载到你的设备。两者都是本地文件操作，数据不离开你的设备。</p>
 
 <h2>删除数据</h2>
-<p>可在侧边栏逐条删除高亮；或直接卸载扩展——卸载即删除全部本地数据。不存在需要申请
-删除的服务器副本，因为没有服务器。</p>
+<p>可在侧边栏逐条删除高亮；或直接卸载扩展——卸载即删除全部本地数据。我们没有服务器，
+因此你的高亮与备注不存在需要申请删除的服务器副本。（如购买过 Pro，Gumroad 会按其自身
+政策保留购买记录。）</p>
 
 <h2>政策变更</h2>
 <p>若未来版本改变以上任何一条（例如增加可选同步功能），本页会在该版本发布前更新，
